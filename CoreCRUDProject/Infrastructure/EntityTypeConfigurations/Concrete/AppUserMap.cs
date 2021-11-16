@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoreCRUDProject.Infrastructure.EntityTypeConfigurations.Concrete
 {
-    public class AppUserMap:BaseMap<AppUser>
+    public class AppUserMap : BaseMap<AppUser>
     {
         public override void Configure(EntityTypeBuilder<AppUser> builder)
         {

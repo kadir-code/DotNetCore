@@ -1,4 +1,5 @@
-﻿using CoreCRUDProject.Models.Entities.Concrete;
+﻿using CoreCRUDProject.Infrastructure.EntityTypeConfigurations.Concrete;
+using CoreCRUDProject.Models.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace CoreCRUDProject.Infrastructure.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new AppUser());
+            modelBuilder.ApplyConfiguration(new AppUserMap());
             base.OnModelCreating(modelBuilder);
         }
 

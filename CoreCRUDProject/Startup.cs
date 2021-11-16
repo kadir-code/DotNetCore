@@ -1,4 +1,6 @@
 using CoreCRUDProject.Infrastructure.Context;
+using CoreCRUDProject.Infrastructure.Repositories.Concrete;
+using CoreCRUDProject.Infrastructure.Repositories.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +31,7 @@ namespace CoreCRUDProject
             {
                 optons.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
-            //services.AddScoped<IAppUserRepository, AppUserRepository>();
+            services.AddScoped<IAppUserRepository, AppUserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
